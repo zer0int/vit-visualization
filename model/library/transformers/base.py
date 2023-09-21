@@ -20,7 +20,7 @@ class TimmModel(TransformerModel):
     options = []
 
     def get_size_based_on_name(self, name: str) -> int:
-        return 384 if '384' in name else 224
+        return 336 if '336' in name else 224
 
     def __init__(self, o: int, batch_size: int):
         def get_from_timm(option: int = 0) -> torch.nn.Module:

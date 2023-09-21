@@ -13,9 +13,10 @@ Available models:
 - *Take a holiday and leave it running; literally takes days to visualize all features even on an RTX 4090.*
 - *Requires <10 GB VRAM even for a CLIP5_ViT-L/14@336px, though!*
 
-### For example: CLIP5_ViT-L/14@336px Layer 20: Feature F1, F223, F670
+### For example: CLIP5_ViT-L/14@336px Layer 20: Feature F1, F223, F670, F672
 
-![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/d3a3637f-9f68-4289-9abd-ace2c31f13e8)![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/9f994ef5-bca6-406e-bf10-818b2ca11180)![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/cb00c414-17b7-4496-810c-5e0bfa92403e)
+![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/d3a3637f-9f68-4289-9abd-ace2c31f13e8) ![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/9f994ef5-bca6-406e-bf10-818b2ca11180) ![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/cb00c414-17b7-4496-810c-5e0bfa92403e) 
+![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/43b87df4-705d-4545-a63a-32f82909e6f5)
 
 
 Originally implemented CLIP models, see below for original README.md:
@@ -25,6 +26,7 @@ Originally implemented CLIP models, see below for original README.md:
 ## What do Vision Transformers Learn? A Visual Exploration
 
 ![Visualizations](readme_images/1.png)
+
 
 ### ViT Models:
 

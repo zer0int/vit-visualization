@@ -1,3 +1,27 @@
+## This: Include large CLIP ViT models
+
+Available models:
+
+- 94:     CLIP0_RN50x4
+- 95:     CLIP1_RN50x16
+- 96:     CLIP2_ViT-B/32
+- 97:     CLIP3_ViT-B/16
+- 98:     CLIP4_ViT-L/14
+- 99:     CLIP5_ViT-L/14@336px
+
+### /experiments/it15/runvis98.py to visualize all or [range] of features for a given layer
+- *Take a holiday and leave it running; literally takes days to visualize all features even on an RTX 4090.*
+- *Requires <10 GB VRAM even for a CLIP5_ViT-L/14@336px, though!*
+
+### For example: CLIP5_ViT-L/14@336px Layer 20: Feature F1, F223, F670
+
+![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/d3a3637f-9f68-4289-9abd-ace2c31f13e8)![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/9f994ef5-bca6-406e-bf10-818b2ca11180)![0_final](https://github.com/zer0int/vit-visualization/assets/132047210/cb00c414-17b7-4496-810c-5e0bfa92403e)
+
+
+Originally implemented CLIP models, see below for original README.md:
+
+--------------
+
 ## What do Vision Transformers Learn? A Visual Exploration
 
 ![Visualizations](readme_images/1.png)

@@ -25,7 +25,12 @@ class ImageNetVisualizer:
         self.lr = lr
 
     def __call__(self, img: torch.tensor = None, optimizer: optim.Optimizer = None):
-        img = img.detach().clone().to('cuda:0').requires_grad_()
+        #img = img.detach().clone().to('cuda:0').requires_grad_()
+        # Check if img requires grad and is on the correct device instead of detaching and cloning
+        if not img.is_cuda or img.device != torch.device('cuda:0'):
+            img = img.to('cuda:0')
+        if not img.requires_grad:
+            img.requires_grad_()
 
         optimizer = optimizer if optimizer is not None else optim.Adam([img], lr=self.lr, betas=(0.5, 0.99), eps=1e-8)
         lr_scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, self.steps, 0.)
@@ -50,7 +55,7 @@ class ImageNetVisualizer:
             img.data = (self.post_aug(img) if self.post_aug is not None else img).data
 
             self.loss.reset()
-            torch.cuda.empty_cache()
+            #torch.cuda.empty_cache() # No need, slows down things
 
         optimizer.state = collections.defaultdict(dict)
         return img
